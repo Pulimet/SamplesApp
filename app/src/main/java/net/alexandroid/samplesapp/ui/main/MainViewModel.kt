@@ -8,7 +8,7 @@ import kotlinx.coroutines.flow.onStart
 import net.alexandroid.samplesapp.repo.MovieRepo
 import net.alexandroid.samplesapp.ui.BaseViewModel
 
-@ExperimentalCoroutinesApi
+@Suppress("EXPERIMENTAL_API_USAGE")
 class MainViewModel(private val movieRepo: MovieRepo) : BaseViewModel() {
 
     fun getMovieTitle(): LiveData<String> = movieRepo.getMovieTitle()

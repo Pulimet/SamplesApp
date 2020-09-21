@@ -11,7 +11,6 @@ import org.koin.dsl.module
 
 const val TMDB_URL = "https://api.themoviedb.org/"
 
-@ExperimentalCoroutinesApi
 val appModule = module {
 
     // Network
