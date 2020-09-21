@@ -32,7 +32,7 @@ class App : Application(), CoroutineScope {
     private fun initKoin() = launch {
         val koinInitTime = measureTimeMillis {
             startKoin {
-                KoinLogs()
+                logger(KoinLogs())
                 androidContext(this@App)
                 modules(appModule)
             }
