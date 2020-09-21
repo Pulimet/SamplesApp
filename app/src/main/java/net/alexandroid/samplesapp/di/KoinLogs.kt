@@ -7,7 +7,7 @@ import org.koin.core.logger.Level
 import org.koin.core.logger.Logger
 import org.koin.core.logger.MESSAGE
 
-class KoinLogs : Logger(level = Level.DEBUG) {
+class KoinLogs : Logger(level = Level.INFO) {
     override fun log(level: Level, msg: MESSAGE) {
         when (level) {
             Level.DEBUG -> logD(msg)
