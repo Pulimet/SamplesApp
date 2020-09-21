@@ -1,10 +1,11 @@
 package net.alexandroid.samplesapp
 
 import android.app.Application
+import net.alexandroid.samplesapp.di.KoinLogs
 import net.alexandroid.samplesapp.di.appModule
 import net.alexandroid.utils.mylogkt.MyLogKt
+import net.alexandroid.utils.mylogkt.warn
 import org.koin.android.ext.koin.androidContext
-import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
 
 class App : Application() {
@@ -18,11 +19,12 @@ class App : Application() {
     private fun setLogger() {
         MyLogKt.isLogsShown = BuildConfig.DEBUG
         MyLogKt.tag = "@@@"
+        warn("=== App created and logger is ready ===")
     }
 
     private fun initKoin() {
         startKoin {
-            androidLogger()
+            KoinLogs()
             androidContext(this@App)
             modules(appModule)
         }
