@@ -1,9 +1,13 @@
 package net.alexandroid.samplesapp.repo
 
-import androidx.lifecycle.MutableLiveData
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.flow
 
 class MovieRepo {
 
-    fun getMovieTitle() = MutableLiveData("We will show here a title of a movie")
+    fun getMovieTitle() = flow {
+        delay(1000)
+        emit("We will show here a title of a movie")
+    }
 
 }
