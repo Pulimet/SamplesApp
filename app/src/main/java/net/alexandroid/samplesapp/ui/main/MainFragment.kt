@@ -12,6 +12,8 @@ class MainFragment : Fragment(R.layout.main_fragment) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        tvVideoTitle.text = "We will show here a title of movie"
+        viewModel.getMovieTitle().observe(viewLifecycleOwner) {
+            tvVideoTitle.text = it
+        }
     }
 }
