@@ -1,6 +1,5 @@
 package net.alexandroid.samplesapp.di
 
-import kotlinx.coroutines.ExperimentalCoroutinesApi
 import net.alexandroid.samplesapp.network.NetworkObjectsCreator
 import net.alexandroid.samplesapp.network.services.TmdbApiService
 import net.alexandroid.samplesapp.repo.MovieRepo
