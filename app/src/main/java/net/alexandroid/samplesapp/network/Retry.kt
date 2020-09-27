@@ -7,7 +7,7 @@ sealed class NetworkResponse<T>
 class Success<T>(val data: T) : NetworkResponse<T>()
 class Fail<T>(val e: Exception) : NetworkResponse<T>()
 
-suspend fun <T> retryIO(
+suspend fun <T> retryThis(
     times: Int = 3,
     initialDelay: Long = 500, // 1/2 second
     maxDelay: Long = 4000,    // 4 seconds

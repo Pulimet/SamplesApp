@@ -1,5 +1,7 @@
 package net.alexandroid.samplesapp.model
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
 object Tmdb {
@@ -10,7 +12,9 @@ object Tmdb {
         val results: MutableList<Movie>
     )
 
+    @Entity(tableName = "movies")
     data class Movie(
+        @PrimaryKey
         val id: Int,
         val title: String,
         @SerializedName("poster_path") val posterImg: String?,
