@@ -18,7 +18,7 @@ class DataStoreFragment : BaseFragment(R.layout.fragment_data_store), View.OnCli
         super.onViewCreated(view, savedInstanceState)
 
         lifecycleScope.launch {
-            viewModel.userPreferencesFlow.collect {
+            viewModel.getTextFlow().collect {
                 tvResult.text = it
             }
         }
