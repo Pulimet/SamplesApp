@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_mainFragment_to_dataStoreFragment"
             app:destination="@id/dataStoreFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_channelsFragment"
+            app:destination="@id/channelsFragment" />
     </fragment>
 
     <fragment
@@ -20,5 +23,10 @@
         android:name="net.alexandroid.samplesapp.ui.datastore.DataStoreFragment"
         android:label="fragment_data_store"
         tools:layout="@layout/fragment_data_store" />
+    <fragment
+        android:id="@+id/channelsFragment"
+        android:name="net.alexandroid.samplesapp.ui.channels.ChannelsFragment"
+        android:label="fragment_channels"
+        tools:layout="@layout/fragment_channels" />
 
 </navigation>

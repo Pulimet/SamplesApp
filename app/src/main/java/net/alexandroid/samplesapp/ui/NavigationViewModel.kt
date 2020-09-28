@@ -13,4 +13,8 @@ class NavigationViewModel : BaseViewModel() {
     fun onBtnDataStoreClick() {
         navEvent.value = R.id.action_mainFragment_to_dataStoreFragment
     }
+
+    fun onBtnChannelsClick() {
+        navEvent.value = R.id.action_mainFragment_to_channelsFragment
+    }
 }
