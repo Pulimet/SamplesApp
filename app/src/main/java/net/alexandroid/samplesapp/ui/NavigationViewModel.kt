@@ -4,7 +4,6 @@ import androidx.lifecycle.LiveData
 import net.alexandroid.samplesapp.R
 import net.alexandroid.samplesapp.utils.BaseViewModel
 import net.alexandroid.samplesapp.utils.SingleLiveEvent
-import net.alexandroid.utils.mylogkt.logD
 
 class NavigationViewModel : BaseViewModel() {
 
@@ -12,6 +11,6 @@ class NavigationViewModel : BaseViewModel() {
     fun getNavEvent(): LiveData<Int> = navEvent
 
     fun onBtnDataStoreClick() {
-        navEvent.setValue(R.id.action_mainFragment_to_dataStoreFragment)
+        navEvent.value = R.id.action_mainFragment_to_dataStoreFragment
     }
 }
