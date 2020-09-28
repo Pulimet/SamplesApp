@@ -7,6 +7,7 @@ import androidx.room.Room
 import net.alexandroid.samplesapp.db.MovieDatabase
 import net.alexandroid.samplesapp.network.NetworkObjectsCreator
 import net.alexandroid.samplesapp.network.services.TmdbApiService
+import net.alexandroid.samplesapp.repo.DataStoreRepo
 import net.alexandroid.samplesapp.repo.MovieRepo
 import net.alexandroid.samplesapp.ui.NavigationViewModel
 import net.alexandroid.samplesapp.ui.datastore.DataStoreViewModel
@@ -32,6 +33,7 @@ val appModule = module {
 
     // Repositories
     single { MovieRepo(get(), get()) }
+    single { DataStoreRepo(get()) }
 
     // ViewModels
     viewModel { MainViewModel(get()) }
