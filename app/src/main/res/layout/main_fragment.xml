@@ -17,4 +17,13 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Movie Title Placeholder" />
 
+    <Button
+        android:id="@+id/btnDataStore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/datastore"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

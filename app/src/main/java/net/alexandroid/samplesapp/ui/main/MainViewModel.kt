@@ -5,7 +5,7 @@ import androidx.lifecycle.asLiveData
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.onStart
 import net.alexandroid.samplesapp.repo.MovieRepo
-import net.alexandroid.samplesapp.ui.BaseViewModel
+import net.alexandroid.samplesapp.utils.BaseViewModel
 
 @Suppress("EXPERIMENTAL_API_USAGE")
 class MainViewModel(private val movieRepo: MovieRepo) : BaseViewModel() {

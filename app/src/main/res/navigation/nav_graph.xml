@@ -9,5 +9,16 @@
         android:id="@+id/mainFragment"
         android:name="net.alexandroid.samplesapp.ui.main.MainFragment"
         android:label="main_fragment"
-        tools:layout="@layout/main_fragment" />
+        tools:layout="@layout/main_fragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_dataStoreFragment"
+            app:destination="@id/dataStoreFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dataStoreFragment"
+        android:name="net.alexandroid.samplesapp.ui.datastore.DataStoreFragment"
+        android:label="fragment_data_store"
+        tools:layout="@layout/fragment_data_store" />
+
 </navigation>

@@ -35,6 +35,7 @@ android {
 }
 
 dependencies {
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     def nav_version = "2.3.0"
     def koin_version = "2.2.0-beta-1" // Used to prevent crash until 2.1.7 released (https://github.com/InsertKoinIO/koin/issues/847)
     def coroutines_version = "1.3.8"

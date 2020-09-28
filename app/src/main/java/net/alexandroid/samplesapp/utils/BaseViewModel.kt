@@ -1,4 +1,4 @@
-package net.alexandroid.samplesapp.ui
+package net.alexandroid.samplesapp.utils
 
 import androidx.lifecycle.ViewModel
 import net.alexandroid.utils.mylogkt.logW

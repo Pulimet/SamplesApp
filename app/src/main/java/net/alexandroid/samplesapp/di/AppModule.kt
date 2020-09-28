@@ -5,6 +5,7 @@ import net.alexandroid.samplesapp.db.MovieDatabase
 import net.alexandroid.samplesapp.network.NetworkObjectsCreator
 import net.alexandroid.samplesapp.network.services.TmdbApiService
 import net.alexandroid.samplesapp.repo.MovieRepo
+import net.alexandroid.samplesapp.ui.NavigationViewModel
 import net.alexandroid.samplesapp.ui.main.MainViewModel
 import org.koin.android.ext.koin.androidContext
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -27,5 +28,6 @@ val appModule = module {
 
     // ViewModels
     viewModel { MainViewModel(get()) }
+    viewModel { NavigationViewModel() }
 
 }
