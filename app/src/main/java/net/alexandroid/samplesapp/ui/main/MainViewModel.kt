@@ -10,9 +10,11 @@ import net.alexandroid.samplesapp.utils.BaseViewModel
 @Suppress("EXPERIMENTAL_API_USAGE")
 class MainViewModel(private val movieRepo: MovieRepo) : BaseViewModel() {
 
-    fun getMovieTitle(): LiveData<String> = movieRepo.getMovieTitle()
-        .onStart { emit("Loading...") }
-        .map { "Movie: $it" }
-        .asLiveData()
+    val movieTitle:  LiveData<String> by lazy {
+        movieRepo.getMovieTitle()
+            .onStart { emit("Loading...") }
+            .map { "Movie: $it" }
+            .asLiveData()
+    }
 
 }

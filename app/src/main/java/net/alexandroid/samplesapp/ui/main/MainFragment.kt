@@ -22,7 +22,7 @@ class MainFragment : BaseFragment(R.layout.main_fragment), View.OnClickListener 
     }
 
     private fun observeMovieTitle() {
-        viewModel.getMovieTitle().observe(viewLifecycleOwner) {
+        viewModel.movieTitle.observe(viewLifecycleOwner) {
             tvVideoTitle.text = it
         }
     }
