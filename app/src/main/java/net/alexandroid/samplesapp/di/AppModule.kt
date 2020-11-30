@@ -1,7 +1,5 @@
 package net.alexandroid.samplesapp.di
 
-import androidx.datastore.DataStore
-import androidx.datastore.preferences.Preferences
 import androidx.datastore.preferences.createDataStore
 import androidx.room.Room
 import net.alexandroid.samplesapp.db.MovieDatabase
@@ -21,7 +19,7 @@ const val TMDB_URL = "https://api.themoviedb.org/"
 val appModule = module {
 
     // DataStore
-    single<DataStore<Preferences>> { androidContext().createDataStore("storage") }
+    single { androidContext().createDataStore("storage") }
 
     // DB
     single { Room.databaseBuilder(get(), MovieDatabase::class.java, "movies_database").build() }
